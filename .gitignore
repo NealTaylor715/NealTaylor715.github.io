@@ -4,4 +4,8 @@ bower_components/
 
 build/
 dist/
+<<<<<<< HEAD
 .*
+=======
+.*
+>>>>>>> 6583ea4b70110a87f5f7753344f8b278fa80282e
