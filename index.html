@@ -1,42 +1,346 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>
-            Neal Taylor
-        </title>
-        <link rel="stylesheet" type="text/css" href="main.css">
-    </head>
+<!doctype html>
+<html class="no-js" lang="en">
 
-    <body>
-         <div id="all-contents"> 
-            <nav>
-                <ul>
-                    <a href="index.html">Home</a>
-                    <a href="portfolio.html">Portfolio</a>
-                </ul>
-            </nav>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Neal Taylor | Specialist</title>
+	<link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+	<style>
+		.container {
+			height: 100vh;
+			display: -webkit-box;
+			display: flex;
+			-webkit-box-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			justify-content: center;
+			overflow: hidden;
+		}
 
-            <main>
-                <div class="sidebar">
-                
-                </div>
-                
-                <div class="content">
-                    <header>
-                        <img src="https://raw.githubusercontent.com/NealTaylor715/NealTaylor715.github.io/master/10570560_902269639786375_3468640157899153273_n.jpg"></>    
-                        <h1>Neal Taylor</h1>
-                    </header>
-                        <p>Web Consultant Assistant at <a href="http://mirliton.net/">Mirliton Media</a></p>
-                            <section class="interests">
-                                <header>Interests</header>
-                                    <ul>
-                                        <li>Pizza</li>
-                                        <li>Problem Solving</li>
-                                        <li>The Brain of a Republican Presidential Candidate</li>
-                                    </ul>
-                            </section>
-                </div>
-            </main>
-        </div>
-    </body>
+		.box {
+			width: 60vmin;
+			height: 60vmin;
+			border: 1px dashed rgba(255, 255, 255, 0.4);
+			position: relative;
+		}
+
+		.box::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			border-radius: 50%;
+			border: 1px dashed rgba(255, 255, 255, 0.4);
+			-webkit-transform: scale(1.42);
+			transform: scale(1.42);
+		}
+
+		.spin-container {
+			width: 100%;
+			height: 100%;
+			-webkit-animation: spin 12s linear infinite;
+			animation: spin 12s linear infinite;
+			position: relative;
+		}
+
+		.shape {
+			width: 100%;
+			height: 100%;
+			-webkit-transition: border-radius 1s ease-out;
+			transition: border-radius 1s ease-out;
+			border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+			-webkit-animation: morph 8s ease-in-out infinite both alternate;
+			animation: morph 8s ease-in-out infinite both alternate;
+			position: absolute;
+			overflow: hidden;
+			z-index: 5;
+		}
+
+		.bd {
+			width: 142%;
+			height: 142%;
+			position: absolute;
+			left: -21%;
+			top: -21%;
+			background: url("images/coding.jpg");
+			background-size: 100%;
+			background-position: center center;
+			display: -webkit-box;
+			display: flex;
+			color: #003;
+			font-size: 5vw;
+			font-weight: bold;
+			-webkit-box-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			justify-content: center;
+			text-align: center;
+			text-transform: uppercase;
+			animation: spin 12s linear infinite reverse;
+			opacity: 1;
+			z-index: 2;
+		}
+
+		@-webkit-keyframes morph {
+			0% {
+				border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+			}
+
+			100% {
+				border-radius: 40% 60%;
+			}
+		}
+
+		@keyframes morph {
+			0% {
+				border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+			}
+
+			100% {
+				border-radius: 40% 60%;
+			}
+		}
+
+		@-webkit-keyframes spin {
+			to {
+				-webkit-transform: rotate(1turn);
+				transform: rotate(1turn);
+			}
+		}
+
+		@keyframes spin {
+			to {
+				-webkit-transform: rotate(1turn);
+				transform: rotate(1turn);
+			}
+		}
+
+		.line-1 {
+			position: relative;
+			top: 50%;
+			width: 24em;
+			margin: 0 auto;
+			border-right: 2px solid rgba(255, 255, 255, .75);
+			font-size: 180%;
+			text-align: center;
+			white-space: nowrap;
+			overflow: hidden;
+			transform: translateY(-50%);
+		}
+
+		/* Animation */
+		.anim-typewriter {
+			animation: typewriter 4s steps(44) 1s 1 normal both,
+				blinkTextCursor 500ms steps(44) infinite normal;
+		}
+
+		@keyframes typewriter {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 24em;
+			}
+		}
+
+		@keyframes blinkTextCursor {
+			from {
+				border-right-color: rgba(255, 255, 255, .75);
+			}
+
+			to {
+				border-right-color: transparent;
+			}
+		}
+
+		h1 {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 5rem;
+			color: #fff;
+			position: relative;
+		}
+
+		h2 {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 4rem;
+		}
+
+		.lead {
+			color: #fff;
+			font-weight: 600;
+		}
+
+		.flx {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.row.pad {
+			padding: 4rem 0;
+		}
+
+		.row {
+			max-width: 99rem;
+		}
+
+		.wrapper.overlay {
+			position: relative;
+		}
+
+		.wrapper.overlay::before {
+			position: absolute;
+			content: "";
+			height: 100%;
+			width: 100%;
+			background-color: #111111;
+			opacity: 0.7;
+		}
+
+		.wrapper.overlay h2,
+		.wrapper.overlay li {
+			position: relative;
+			z-index: 9;
+			list-style-type: none;
+			color: #fff;
+		}
+
+		.wrapper.overlay li {
+			font-size: 2rem;
+			font-weight: bold;
+		}
+
+		#big {
+			font-size: 6rem;
+			font-weight: bold;
+		}
+
+		.button {
+			font-family: Arial, Helvetica, sans-serif;
+			width: 35%;
+			background-color: #004966;
+			border-radius: 5px;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 3.5rem;
+		}
+
+		.img-wrapper {
+			height: 10rem;
+			width: 10rem;
+			border-radius: 50%;
+			position: absolute;
+			right: 0;
+			top: 2rem;
+			overflow: hidden;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="wrapper" style="background-color: #3D9970;">
+		<div class="row flx">
+			<div class="small-4 columns">
+				<h1>I'm Neal Taylor<div class="img-wrapper">
+						<img src="images/taylor_neal.jpg" />
+					</div>
+				</h1>
+				<p class="lead">A software engineer, ready to offer digital solutions for modern problems. For the
+					past 4 years, I have sought out knowledge about programming and developing the path I want to take
+					when starting my own business. In the past, I have interned with a large web consulting firm while
+					enrolling in a full immersive course on JavaScript, and other programming languages, to push myself
+					to learn as much as the IT industry has to offer.</p>
+
+				<p class="lead">Currently, I am a full stack developer for a full service marketing agency where I use
+					my tools and
+					knowledge to build applications to enhance our clients and internal processes to increase
+					productivity and quality of life.</p>
+
+				<p class="lead">My goal is to become so versatile, that when I start my own business, I can offer
+					limitless services
+					to my clients, constantly fueling my drive to obtain knowledge, implement it for myself, and share
+					my discoveries with the IT community.</p>
+			</div>
+			<div class="small-8 columns">
+				<div class="container">
+					<div class="box">
+						<div class="spin-container">
+							<div class="shape">
+								<div class="bd"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="wrapper overlay"
+		style="background-image: url('images/grey-bg.jpg'); height: 100vh; background-attachment: fixed; background-repeat: no-repeat; background-size: cover;">
+		<div class="row pad">
+			<div class="small-12 columns toolshed">
+				<h2 style="padding-bottom: 4rem;" class="text-center">My Toolshed</h2>
+				<div class="small-4 columns">
+					<li>jQuery</li>
+					<li>Angular 2</li>
+					<li>React Native</li>
+					<li>Databases</li>
+					<li>AngularJS</li>
+					<li>WordPress</li>
+					<li>Windows</li>
+					<li>Git</li>
+					<li>Bash</li>
+					<li>Powershell</li>
+					<li>D3.js</li>
+					<li>MongoDB</li>
+				</div>
+				<div class="small-4 columns">
+					<li>MySQL</li>
+					<li>Cascading Style Sheets (CSS)</li>
+					<li>Photoshop</li>
+					<li>Content Management Systems (CMS)</li>
+					<li>Node.js</li>
+					<li>Leadership</li>
+					<li>Teamwork</li>
+					<li>Team Management</li>
+					<li>Communication</li>
+					<li>Customer Service</li>
+					<li>Easily Adaptable</li>
+					<li>Organization Skills</li>
+					<li>Express.js</li>
+				</div>
+				<div class="small-4 columns">
+					<li>Software Troubleshooting</li>
+					<li>Mean Stack</li>
+					<li>npm</li>
+					<li>Heroku</li>
+					<li>Neo4j</li>
+					<li>Flexible Approach</li>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="wrapper" style="background-color: #7FDBFF;">
+		<div class="row">
+			<div class="small-12 columns text-center">
+				<div style="padding: 5rem;"><span id="big">Interest?</span><br /><a class="button"
+						href="mailto:neal.taylorjr@gmail.com">Let's Talk</a></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+</body>
+
 </html>
